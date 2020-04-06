@@ -1,0 +1,105 @@
+/*
+ * Class: CMSC140 
+ * Instructor: Abedzadeh
+ * Project 1
+ * Description: The Dept plans to purchase a humanoid robot. The Chairman would like you to write a program to show a greeting script the robot can use later. 
+                Your first task is to use the following script to prototype the robot for presentation.
+ * Due Date: 2/29/2020
+ * I pledge that I have completed the programming assignment independently.
+ * I have not copied the code from a student or any source.
+   I have not given my code to any student.
+   Print your Name here: Yi Chung
+   
+ * Pseudocode or Algorithm for the program:
+     (be sure to indent items with control structure)
+	 (need to match flow chart submitted in documentation)
+  1. Assign variables
+  2.
+  3.
+  4.
+  5.
+  */
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+const int ONE_DOG_YEAR = 7;
+const int ONE_FISH_YEAR = 5;
+const int DAYS_PER_MONTH = 30; 
+const int assignmentNumber = 1;
+const string robotName = "Nao";
+const string visitorName = "Yi Chung";
+
+int main()
+{
+	int number;
+	double number1;
+	double number2;
+	string visitorName;
+	const int MONTHS = 12, DAYS = 30, HOURS = 24, MINUTES = 60, SECONDS = 60;
+
+	cout << "************** Robot Prototype Scripting ***********************" << endl;
+	cout << "Hello, welcome to Montgomery College! My name is " << robotName << ". May I have your name?\n";
+	getline(cin, visitorName);
+	cout << "Nice to have you with us today, " << visitorName << "!" << endl;
+	cout << "Let me impress you with a small game." << endl;
+	cout << "Give me the age of an important person or a pet to you." << endl;
+	cout << "Please give me only a number: " << endl;
+	cin >> number;
+	cout << "\n";
+	cout << "You have entered " << number << "." << endl;
+	cout << "If this is for a person, the age can be expressed as: " << endl;
+	cout << number << "YEARS" << endl;
+
+	//calculations for the numbers
+	int month = number * MONTHS;
+	cout << "or" << month << "MONTHS" << endl;
+
+	int days = (number * MONTHS * DAYS);
+	cout << "or about " << days << "DAYS" << endl;
+
+	int hours = (number * MONTHS * DAYS * HOURS);
+	cout << "or about " << hours << "HOURS" << endl;
+
+	int minutes = (number * MONTHS * DAYS * HOURS * MINUTES);
+	cout << "or about " << minutes << "MINUTES" << endl;
+
+	int seconds = (number * MONTHS * DAYS * HOURS * MINUTES * SECONDS);
+	cout << "or about " << seconds << "SECONDS" << "." << endl;
+
+	//what does it mean for the dogs and fishes
+	cout << "If this is for a dog, it is " << ONE_DOG_YEAR * number << " years old in human age." << endl;
+	cout << "If this is for a gold fish, it is " << ONE_FISH_YEAR * number << " years old in human age." << endl;
+
+	//another game
+	cout << "Let's play another game, " << visitorName << ". Give me a whole number. ";
+	cin >> number1;
+
+	cout << "Very well. Give me another whole number. ";
+	cin >> number2;
+
+	int answer1 = (number1 + number2);
+	int answer2 = (number1 / number2);
+	cout << "Using the operator '+' in C++, the result of " << number1 << " + " << number2 << " is " << answer1 << "." << endl;
+	cin >> answer1;
+	cout << "Using the operator '/', the result of ";
+	cout << number1 << " / " << number2 << " is " << answer2 << endl;
+	cin >> answer2;
+	
+	cout << setprecision(1) << fixed;
+	cout << "however, the result of " << number1 << " / " << number2 << " is about " << answer2 << "." << endl;
+	cin >> answer2;
+
+	//Thank you for testing my program!! My name as the programmer; Assignment and Project number; Due Date
+	cout << "Thank you for testing my program!!" << endl;
+	cout << "PROGRAMMER: " << visitorName << endl;
+	cout << "CMSC140 Project " << assignmentNumber << endl;
+	cout << "Due Date: 2/29/2020" << endl;
+
+	system("pause");
+	return 0;
+
+}
+
